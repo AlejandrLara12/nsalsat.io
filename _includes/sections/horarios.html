@@ -2,7 +2,7 @@
 
   <div class="days-menu">
     {% for class in site.data.horarios.horario %}
-      <a class="day" href="#{{ class.dia }}" >{{ class.letter }}</a>
+      <a class="day-link" href="#{{ class.dia }}" ><div class="day">{{ class.letter }}</div></a>
     {% endfor %}
   </div>
 
