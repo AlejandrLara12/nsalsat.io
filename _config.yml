@@ -1,0 +1,17 @@
+
+
+
+title: Nsasate | Dance Studio
+owner: Academia de Baile Nsalsat
+email: nsalsat@hotmail.com
+description: DescriptionTest123
+
+url: http://localhost:4000/nsalsat/ # the base hostname & protocol for your site
+
+
+markdown: redcarpet
+baseurl: /nsalsat
+exclude: ['README.md']
+
+sass:
+  style: compressed

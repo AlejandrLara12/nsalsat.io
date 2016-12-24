@@ -1,0 +1,32 @@
+<section class="horarios-container">
+
+  <div class="days-menu">
+    {% for class in site.data.horarios.horario %}
+      <a class="day" href="#{{ class.dia }}" >{{ class.letter }}</a>
+    {% endfor %}
+  </div>
+
+  <div class="horarios-wrap">
+      {% for class in site.data.horarios.horario %}
+      <div class="day-container" id="{{ class.dia }}">
+
+        <h4 class="dia">{{ class.dia }}</h4>
+
+        <p class="clase">{{ class.clase1 }}</p>
+        <div class="dia-clase-div"></div>
+        <p class="hora">{{ class.hora1 }}</p>
+
+        {% if  class.hora2 %}
+        <div class="clases-div"></div>
+
+        <p class="clase">{{ class.clase2 }}</p>
+        <div class="dia-clase-div"></div>
+        <p class="hora">{{ class.hora2 }}</p>
+
+        {% endif %}
+
+      </div>
+      {% endfor %}
+  </div>
+
+</section>
