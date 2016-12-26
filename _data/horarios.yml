@@ -1,30 +1,63 @@
-horario:
-- {dia: Lunes,
-    letter: L,
-        hora1: '7:00 - 8:00 PM',
-        clase1: 'MixLatino Kizomba',
-        hora2: '8:00 - 9:00 PM',
-        clase2: 'BachataCombo  Salsa On 2'}
-- {dia: Martes,
-    letter: M,
-        hora1: '7:00 - 8:00 PM',
-        clase1: 'SalsaCombo <br><span class="and">&</span><br> Ladies',
-        hora2: '8:00 - 9:00 PM',
-        clase2: 'Salsa Basico <br><span class="and">&</span><br> MixLatino'}
-- {dia: Miercoles,
-    letter: M,
-        hora1: '7:00 - 8:00 PM',
-        clase1: 'Bachata 2 <br><span class="and">&</span><br> Stretching',
-        hora2: '8:00 - 9:00 PM',
-        clase2: 'MixLatino <br><span class="and">&</span><br> Salsa Basico'}
-- {dia: Jueves,
-    letter: J,
-        hora1: '7:00 - 8:00 PM',
-        clase1: 'SalsaCombo <br><span class="and">&</span><br> Kizomba',
-        hora2: '8:00 - 9:00 PM',
-        clase2: 'Salsa On 2 <br><span class="and">&</span><br> Bachata Basico'}
 
-- {dia: Sabado,
-    letter: S, 
-        hora1: '4:00 - 5:30 PM',
-        clase1: '30min Salsa - 1hr Bachata / Streching'}
+# Nombre de salones
+
+salonA: Salon A
+salonB: Salon B
+
+
+# NOTAS IMPORTANTES
+# Limite de 15 caracteres, sin embargo pued ser de linea multiple
+
+horario:
+- {dia: 'Lunes',
+    letter: 'L',
+        hora-1: ,
+        clase-1-a: 'Mix Latino',
+        clase-1-b: 'Kizomba',
+        hora-2: '10:00 - 11:00 PM',
+        clase-2-a: 'Bachata Combo',
+        clase-2-b: 'Salsa on 2'
+        }
+- {dia: 'Martes',
+    letter: 'M',
+        hora-1: '7:00 - 8:00 PM',
+        clase-1-a: 'Salsa Combo',
+        clase-1-b: 'Ladies',
+        hora-2: '8:00 - 9:00 PM',
+        clase-2-a: 'Salsa Basico',
+        clase-2-b: 'Mix Latino'
+        }
+- {dia: 'Miercoles',
+    letter: M,
+        hora-1: ,
+        clase-1-a: 'Bachata 2',
+        clase-1-b: 'Streching',
+        hora-2: '8:00 - 9:00 PM',
+        clase-2-a: 'Mix Latino',
+        clase-2-b: 'Salsa Basico'
+        }
+- {dia: 'Jueves',
+    letter: 'J',
+        hora-1: ,
+        clase-1-a: 'Salsa Combo',
+        clase-1-b: 'Kizomba',
+        hora-2: '8:00 - 9:00 PM',
+        clase-2-a: 'Salsa on 2',
+        clase-2-b: 'Bachata Basico',
+        }
+- {dia: 'Sabado',
+    letter: 'S',
+        hora-1: '4:00 - 5:30 PM',
+        clase-1-a: ,
+        clase-1-b: 'test123'
+}
+
+# {dia: Dia,    !necesario, cuidado con mayusculas
+#    letter: L, !necesario
+#        hora-1: , si no se especifica el default sera de 7:00 - 8:00 PM
+#        clase-1-a: 'MixLatino',
+#        clase-1-b: 'Kizomba',
+#        hora-2: '8:00 - 9:00 PM',
+#        clase-2-a: 'BachataCombo',
+#        clase-2-b: 'Salsa On 2'
+#        }

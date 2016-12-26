@@ -1,5 +1,5 @@
 .horarios-container
-  background: #fff
+  //background: #ccc
 
   .days-menu
     display: flex
@@ -8,7 +8,7 @@
 
     .day-link
       text-decoration: none
-      margin: 0 12px
+      margin: 0 10px
 
       .day
         display: inline-block
@@ -23,3 +23,107 @@
         text-align: center
         font-family: $font-family-accent
         font-size: $font-size-title
+        text-decoration: none
+
+  .horarios-wrap
+    //max-width: 960px
+    margin: 30px auto 0
+    
+
+    .day-unit
+      border: 1px solid $accent-dark
+      border-radius: 3px
+      max-width: 340px
+      min-width: 320px
+      margin: 0 auto 20px
+      overflow: hidden
+      padding: 0 0 20px
+      transition: all .25s ease-in-out
+
+      .week-day
+        color: #fff
+        background: $accent-dark
+        font-size: 1.5em
+        font-family: $font-family-accent
+        font-weight: lighter
+        padding: 12px 0
+        text-align: center
+        background-image: url("../../assets/img/horarios-section/horarios-day-pattern.png")
+      .hora
+        font-family: $font-family-normal
+        color: lighten($font-color-ligth, 20)
+        font-weight: 300
+        font-size: .9em
+        text-align: center
+        margin: 30px 0 10px
+
+      .class-detail
+        display: flex
+        //padding: 0 20px 0 0
+
+
+        .room-wrap
+          display: flex
+          flex-direction: column
+          justify-content: space-around
+          font-family: $font-family-normal
+          color: lighten($font-color-ligth, 15)
+          font-weight: 300
+          width: 35%
+          //background: red
+          //margin: 0 10% 0 10%
+          text-align: center
+
+          .room
+            display: block
+
+        .class-wrap
+          display: flex
+          flex-direction: column
+          font-size: 1.8em
+          color: $font-color-dark
+          font-family: $font-family-accent
+          line-height: 1.3
+          width: 65%
+          //background: blue
+          .class-name
+            $space-top-bottom-of-class-name: .25em
+            margin: $space-top-bottom-of-class-name 0 $space-top-bottom-of-class-name
+
+      .line-btw-clases
+        height: 2px
+        width: 30px
+        background: $accent-light
+        margin: 15px auto 0
+
+    .hovered-sized-day-unit
+      transform: scale(1.03)
+      box-shadow: 0px 3px 12px rgba(30,30,30, 0.4)
+
+
+
+  .social-media-btn
+    display: block
+    background-image: url("../../assets/img/horarios-section/likes-pattern.png")
+    background-size: cover
+    text-decoration: none
+    background-color: #1E324F
+    height: 120px
+    width: 100%
+    margin-top: 30px
+
+    .social-media-detail
+      display: flex
+      align-items: center
+      justify-content: center
+      height: 100%
+      font-family: $font-family-accent
+      color: #fff
+      font-size: $font-size-title
+
+      .facebook-icon-svg
+        height: 2em
+        padding-right: 15px
+        .facebook-icon-path
+          stroke: none
+          fill: #fff

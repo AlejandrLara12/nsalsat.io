@@ -2,31 +2,57 @@
 
   <div class="days-menu">
     {% for class in site.data.horarios.horario %}
-      <a class="day-link" href="#{{ class.dia }}" ><div class="day">{{ class.letter }}</div></a>
+      {% if class.clase-1-a or class.clase-1-b or class.clase-2-a or class.clase-2-b %}
+        <a class="day-link" href="#{{ class.dia }}" ><div class="day">{{ class.letter }}</div></a>
+      {% endif %}
     {% endfor %}
   </div>
 
   <div class="horarios-wrap">
       {% for class in site.data.horarios.horario %}
-      <div class="day-container" id="{{ class.dia }}">
+      {% if class.clase-1-a or class.clase-1-b or class.clase-2-a or class.clase-2-b %}
+      <div class="day-unit" id="{{ class.dia }}">
+        <div class="week-day">{{ class.dia}}</div>
+        {% if class.clase-1-a or class.clase-1-b %}
+        <div class="hora">{% if class.hora-1 %}{{ class.hora-1 }}{% else %}7:00 - 8:00 PM{% endif %}</div>
+        <div class="class-detail">
+          <div class="room-wrap">
+            {% if class.clase-1-a %}<div class="room">{% if site.data.horarios.salonA %}{{ site.data.horarios.salonA}}{% else %}Room A{% endif %}</div>{% endif %}
+            {% if class.clase-1-b %}<div class="room">{% if site.data.horarios.salonB %}{{ site.data.horarios.salonB}}{% else %}Room B{% endif %}</div>{% endif %}
+          </div>
+          <div class="class-wrap">
+            {% if class.clase-1-a %}<div class="class-name">{{ class.clase-1-a }}</div>{% endif %}
+            {% if class.clase-1-b %}<div class="class-name">{{ class.clase-1-b }}</div>{% endif %}
+          </div>
 
-        <h4 class="dia">{{ class.dia }}</h4>
-
-        <p class="clase">{{ class.clase1 }}</p>
-        <div class="dia-clase-div"></div>
-        <p class="hora">{{ class.hora1 }}</p>
-
-        {% if  class.hora2 %}
-        <div class="clases-div"></div>
-
-        <p class="clase">{{ class.clase2 }}</p>
-        <div class="dia-clase-div"></div>
-        <p class="hora">{{ class.hora2 }}</p>
-
+        </div>
         {% endif %}
 
+        {% if ((class.clase-1-b) or (class.clase-1-a)) and ((class.clase-2-a) or (class.clase-2-b)) %}
+        <div class="line-btw-clases"></div>
+        {% endif %}
+
+        {% if class.clase-2-a or class.clase-2-b %}
+        <div class="hora">{% if class.hora-2 %}{{ class.hora-2 }}{% else %}8:00 - 9:00 PM{% endif %}</div>
+        <div class="class-detail">
+          <div class="room-wrap">
+            {% if class.clase-2-a %}<div class="room">{% if site.data.horarios.salonA %}{{ site.data.horarios.salonA }}{% else %}Room A{% endif %}</div>{% endif %}
+            {% if class.clase-2-b %}<div class="room">{% if site.data.horarios.salonB %}{{ site.data.horarios.salonB }}{% else %}Room B{% endif %}</div>{% endif %}
+          </div>
+          <div class="class-wrap">
+            {% if class.clase-2-a %}<div class="class-name">{{ class.clase-2-a }}</div>{% endif %}
+            {% if class.clase-2-b %}<div class="class-name">{{ class.clase-2-b }}</div>{% endif %}
+          </div>
+
+        </div>
+        {% endif %}
       </div>
+      {% endif %}
       {% endfor %}
   </div>
+
+  <a class="social-media-btn" href="{{ site.data.detalles.button-horario-link }}">
+    <div class="social-media-detail">{% include icons/facebook-icon.svg  %} {{ site.data.detalles.button-horario-msj }}</div>
+  </a>
 
 </section>

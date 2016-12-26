@@ -20,6 +20,13 @@ var main = function() {
 //
 // });
 
+// It gives the Class hovered-sized-day-unit so the day-unit
+// can get bigger once hovered and also gives it a litte shadow
+// SASS in _sass/_horarios.sass  about line 98
+$('.day-unit').hover(function(){
+  $(this).toggleClass('hovered-sized-day-unit');
+  //console.log('Function Hover working')
+});
 
 }// ends main
 
